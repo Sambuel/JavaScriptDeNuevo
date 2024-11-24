@@ -42,3 +42,33 @@ class Domicilio {
 
 const señoraGuadalupe = new Domicilio("Mar del golfo de mexico","1300","sierra de Guadalupe");
 console.log(señoraGuadalupe);
+
+
+const samuelPonce = new Domicilio("Lago xochimilco","65","Miguel Hidalgo")
+console.log(samuelPonce);
+
+
+class Animal {
+
+    animal = "";
+    nombreCientifico = "";
+    cicloDeVida = ""
+
+    constructor(animal = "sin valor" , nombreCientifico = "sin valor" , cicloDeVida = "sin valor"){
+
+        this.animal = animal; 
+        this.nombreCientifico = nombreCientifico;
+        this.cicloDeVida = cicloDeVida;
+
+
+    }
+
+};
+
+
+
+const perro = new Animal("Perro","Perrocinio","depende el tipo de perro");
+console.log(perro);
+
+const lagarto = new Animal("Lagarto","aligaitor","10 años o mas");
+console.log(lagarto);
