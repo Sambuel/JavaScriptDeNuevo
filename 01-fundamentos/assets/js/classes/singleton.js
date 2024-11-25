@@ -30,3 +30,4 @@ console.log(`nombre en la instancia2 es: ${instancia2.nombre}`);
 console.log(`nombre en la instancia3 es: ${instancia3.nombre}`);
 
 
+
