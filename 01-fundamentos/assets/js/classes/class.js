@@ -4,6 +4,7 @@ class Persona {
     nombre = "";
     codigo  ="";
     frase = "";
+    comida = "";
 
     constructor(nombre = "sin nombre",codigo = "sin codigo",frase ="sin frase"){
         // if (!nombre)throw Error("Necesitamos el nombre")
@@ -12,6 +13,17 @@ class Persona {
         this.frase = frase;
 
     }
+    // el set es para establecer un valor 
+    // el set normalmente solo recibe un argumento
+    set setComidaFavorita(comida){
+        this.comida = comida.toUpperCase();
+
+    };
+
+    // Es para establecer un valor  
+    get getComidaFavorita(){
+        return `La Comida fav de ${this.nombre} es ${this.comida}`
+    };
 
     quienSoy(){
         console.log(`soy ${this.nombre} y mi identidad es ${this.codigo}`);
@@ -35,7 +47,13 @@ console.log(GwenPool);
 
 // llamado al metodo quiensoy();
 spiderMan.quienSoy();
-GwenPool.miFrase();
+// GwenPool.miFrase();
+
+spiderMan.setComidaFavorita = "El pie de cereza de la tia May";
+
+
+console.log(spiderMan.getComidaFavorita);
+console.log(spiderMan);
 
 
 console.log("============================");
