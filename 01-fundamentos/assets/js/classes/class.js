@@ -13,6 +13,16 @@ class Persona {
 
     }
 
+    quienSoy(){
+        console.log(`soy ${this.nombre} y mi identidad es ${this.codigo}`);
+    };
+
+
+    miFrase(){
+        this.quienSoy(); // para ocupar el metodo quienSoy adentro del metodo miFrase
+        console.log(`${this.codigo} dice: ${this.frase}`);
+    };
+
 };
 
 
@@ -23,7 +33,12 @@ console.log(spiderMan);
 const GwenPool = new Persona("Gwen Stacy","GwenPool","Besame Andrew o spiderman");
 console.log(GwenPool);
 
+// llamado al metodo quiensoy();
+spiderMan.quienSoy();
+GwenPool.miFrase();
 
+
+console.log("============================");
 
 class Domicilio {
     
@@ -60,7 +75,6 @@ class Animal {
         this.nombreCientifico = nombreCientifico;
         this.cicloDeVida = cicloDeVida;
 
-
     }
 
 };
@@ -72,3 +86,21 @@ console.log(perro);
 
 const lagarto = new Animal("Lagarto","aligaitor","10 años o mas");
 console.log(lagarto);
+
+
+class Animal1 {
+
+// Es opcional declarlas aqui no causa ningun error
+    // animal = "";
+    // nombreCientifico = "";
+    // cicloDeVida = ""
+
+    constructor(animal = "sin valor" , nombreCientifico = "sin valor" , cicloDeVida = "sin valor"){
+
+        this.animal = animal; 
+        this.nombreCientifico = nombreCientifico;
+        this.cicloDeVida = cicloDeVida;
+
+    }
+
+};
