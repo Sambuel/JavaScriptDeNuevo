@@ -6,7 +6,13 @@ class Persona {
     static get conteo(){
         return Persona._conteo + " instancias"
     }
-    
+
+    // metodo
+    static mensaje() {
+        console.log(this.nombre); // undefined
+        console.log("Hola a todos soy un metodo estatico");
+    }
+
     nombre = "";
     codigo  ="";
     frase = "";
@@ -64,7 +70,12 @@ spiderMan.setComidaFavorita = "El pie de cereza de la tia May";
 // Persona._conteo = 2;
 
 console.log("Conteo statico", Persona._conteo);
-console.log(Persona.conteo); // es el get 
+console.log(Persona.conteo); // es el get de conteo
+Persona.mensaje(); // es el metodo estatico 
+
+Persona.propiedadExterna = "Hola Mundo"
+console.log(Persona.propiedadExterna);
+console.log(Persona);
 
 console.log("============================");
 
