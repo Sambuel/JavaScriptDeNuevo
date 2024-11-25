@@ -1,16 +1,25 @@
 
 // sintaxis de las clases
 class Persona {
+
+    static _conteo = 0; // sirve para ver cuantas instancias de mi clase tengo 
+    static get conteo(){
+        return Persona._conteo + " instancias"
+    }
+    
     nombre = "";
     codigo  ="";
     frase = "";
     comida = "";
+
 
     constructor(nombre = "sin nombre",codigo = "sin codigo",frase ="sin frase"){
         // if (!nombre)throw Error("Necesitamos el nombre")
         this.nombre = nombre;
         this.codigo = codigo;
         this.frase = frase;
+
+        Persona._conteo++;
 
     }
     // el set es para establecer un valor 
@@ -37,8 +46,6 @@ class Persona {
 
 };
 
-
-
 const spiderMan = new Persona("peter parker","spiderMan","Besame mary jane");
 console.log(spiderMan);
 
@@ -50,75 +57,78 @@ spiderMan.quienSoy();
 // GwenPool.miFrase();
 
 spiderMan.setComidaFavorita = "El pie de cereza de la tia May";
+// spiderMan.comida = "Duen de verde";
 
+// console.log(spiderMan.getComidaFavorita);
+// console.log(spiderMan);
+// Persona._conteo = 2;
 
-console.log(spiderMan.getComidaFavorita);
-console.log(spiderMan);
-
+console.log("Conteo statico", Persona._conteo);
+console.log(Persona.conteo); // es el get 
 
 console.log("============================");
 
-class Domicilio {
+// class Domicilio {
     
-    calle = "";
-    numero = "";
-    delegacion = "";
+//     calle = "";
+//     numero = "";
+//     delegacion = "";
     
-    constructor(calle = "Aun no hay calle",numero = "Aun no hay numero",delegacion = "no hay delegacion"){
+//     constructor(calle = "Aun no hay calle",numero = "Aun no hay numero",delegacion = "no hay delegacion"){
 
-        this.calle = calle;
-        this.numero = numero;
-        this.delegacion = delegacion;
-    }
-};
-
-
-const señoraGuadalupe = new Domicilio("Mar del golfo de mexico","1300","sierra de Guadalupe");
-console.log(señoraGuadalupe);
+//         this.calle = calle;
+//         this.numero = numero;
+//         this.delegacion = delegacion;
+//     }
+// };
 
 
-const samuelPonce = new Domicilio("Lago xochimilco","65","Miguel Hidalgo")
-console.log(samuelPonce);
+// const señoraGuadalupe = new Domicilio("Mar del golfo de mexico","1300","sierra de Guadalupe");
+// console.log(señoraGuadalupe);
 
 
-class Animal {
-
-    animal = "";
-    nombreCientifico = "";
-    cicloDeVida = ""
-
-    constructor(animal = "sin valor" , nombreCientifico = "sin valor" , cicloDeVida = "sin valor"){
-
-        this.animal = animal; 
-        this.nombreCientifico = nombreCientifico;
-        this.cicloDeVida = cicloDeVida;
-
-    }
-
-};
+// const samuelPonce = new Domicilio("Lago xochimilco","65","Miguel Hidalgo")
+// console.log(samuelPonce);
 
 
+// class Animal {
 
-const perro = new Animal("Perro","Perrocinio","depende el tipo de perro");
-console.log(perro);
+//     animal = "";
+//     nombreCientifico = "";
+//     cicloDeVida = ""
 
-const lagarto = new Animal("Lagarto","aligaitor","10 años o mas");
-console.log(lagarto);
+//     constructor(animal = "sin valor" , nombreCientifico = "sin valor" , cicloDeVida = "sin valor"){
+
+//         this.animal = animal; 
+//         this.nombreCientifico = nombreCientifico;
+//         this.cicloDeVida = cicloDeVida;
+
+//     }
+
+// };
 
 
-class Animal1 {
 
-// Es opcional declarlas aqui no causa ningun error
-    // animal = "";
-    // nombreCientifico = "";
-    // cicloDeVida = ""
+// const perro = new Animal("Perro","Perrocinio","depende el tipo de perro");
+// console.log(perro);
 
-    constructor(animal = "sin valor" , nombreCientifico = "sin valor" , cicloDeVida = "sin valor"){
+// const lagarto = new Animal("Lagarto","aligaitor","10 años o mas");
+// console.log(lagarto);
 
-        this.animal = animal; 
-        this.nombreCientifico = nombreCientifico;
-        this.cicloDeVida = cicloDeVida;
 
-    }
+// class Animal1 {
 
-};
+// // Es opcional declarlas aqui no causa ningun error
+//     // animal = "";
+//     // nombreCientifico = "";
+//     // cicloDeVida = ""
+
+//     constructor(animal = "sin valor" , nombreCientifico = "sin valor" , cicloDeVida = "sin valor"){
+
+//         this.animal = animal; 
+//         this.nombreCientifico = nombreCientifico;
+//         this.cicloDeVida = cicloDeVida;
+
+//     }
+
+// };
